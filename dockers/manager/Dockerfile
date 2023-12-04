@@ -13,7 +13,7 @@ WORKDIR /usr/src/app
 RUN apt update && apt install -y docker.io
 RUN pip install --upgrade pip poetry
 COPY back/pyproject.toml ./
-COPY back/poetry.lock ./
+# COPY back/poetry.lock ./
 RUN poetry install
 COPY back/ ./
 COPY --from=build-front /app/dist/spa/ static/

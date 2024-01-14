@@ -69,7 +69,9 @@ services:
     volumes:
       - traefik-data:/data:rw
       - traefik-logs:/logs/traefik
-      - ./certs/:/etc/certs/
+      - ./docker/traefik-override.toml:/etc/traefik/traefik.toml:ro
+      - ./docker/configs:/etc/traefik:ro
+      - ./certs:/etc/certs:ro
     environment:
       TRAEFIK_PROVIDERS_REDIS_ENDPOINTS: "redis:6379"
       TRAEFIK_PROVIDERS_REDIS_ROOTKEY: "traefik"

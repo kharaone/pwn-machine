@@ -7,10 +7,6 @@
     address=":80"
   [entryPoints.https]
     address=":443"
-      [entryPoints.https.tls]
-        [[entryPoints.https.tls.certificates]]
-          certFile = "/etc/certs/cert.pem"
-          keyFile = "/etc/certs/privkey.pem"
 
 [providers.redis]
   endpoints = "redis:6379"
@@ -24,6 +20,18 @@
 [api]
   insecure = true
   dashboard = false
+
+[tls]
+  [tlsOptions]
+    [tlsOptions.default]
+      minVersion = "VersionTLS12"
+      sniStrict = true
+
+[tls.stores]
+  [tls.stores.default]
+    [tls.stores.default.defaultCertificate]
+      certFile = "/etc/certs/fullchain.pem"
+      keyFile = "/etc/certs/privkey.pem"
 
 
 [certificatesResolvers]

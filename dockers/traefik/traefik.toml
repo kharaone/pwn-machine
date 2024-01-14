@@ -52,7 +52,7 @@
       
       [certificatesResolvers.letsencrypt-staging-dns.acme.dnsChallenge]
         provider = "pdns"
-        delayBeforeCheck = 30
+        delayBeforeCheck = 0
 
   [certificatesResolvers.letsencrypt-http]
     [certificatesResolvers.letsencrypt-http.acme]
@@ -71,4 +71,4 @@
       
       [certificatesResolvers.letsencrypt-dns.acme.dnsChallenge]
         provider = "pdns"
-        delayBeforeCheck = 30
+        delayBeforeCheck = 0

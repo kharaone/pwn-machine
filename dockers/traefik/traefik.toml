@@ -37,7 +37,7 @@
 [certificatesResolvers]
   [certificatesResolvers.letsencrypt-staging-http]
     [certificatesResolvers.letsencrypt-staging-http.acme]
-      email = "__EMAIL__"
+      email = "kharaone@wearehackerone.com"
       storage = "/tmp/acme-staging-http.json"
       caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
   
@@ -46,7 +46,7 @@
 
   [certificatesResolvers.letsencrypt-staging-dns]
     [certificatesResolvers.letsencrypt-staging-dns.acme]
-      email = "__EMAIL__"
+      email = "kharaone@wearehackerone.com"
       storage = "/tmp/acme-staging-dns.json"
       caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
       
@@ -56,7 +56,7 @@
 
   [certificatesResolvers.letsencrypt-http]
     [certificatesResolvers.letsencrypt-http.acme]
-      email = "__EMAIL__"
+      email = "kharaone@wearehackerone.com"
       storage = "/data/acme-http.json"
       caServer = "https://acme-v02.api.letsencrypt.org/directory"
   
@@ -65,7 +65,7 @@
 
   [certificatesResolvers.letsencrypt-dns]
     [certificatesResolvers.letsencrypt-dns.acme]
-      email = "__EMAIL__"
+      email = "kharaone@wearehackerone.com"
       storage = "/data/acme-dns.json"
       caServer = "https://acme-v02.api.letsencrypt.org/directory"
       

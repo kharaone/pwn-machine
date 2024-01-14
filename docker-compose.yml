@@ -69,6 +69,8 @@ services:
     volumes:
       - traefik-data:/data:rw
       - traefik-logs:/logs/traefik
+      - ./certs/certs-traefik.toml:/etc/traefik/dynamic/certs-traefik.toml
+      - ./certs/:/etc/certs/
     environment:
       TRAEFIK_PROVIDERS_REDIS_ENDPOINTS: "redis:6379"
       TRAEFIK_PROVIDERS_REDIS_ROOTKEY: "traefik"

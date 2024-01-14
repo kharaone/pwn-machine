@@ -1,0 +1,10 @@
+[[tls.certificates]]
+  certFile = "/etc/certs/kharaone.crt"
+  keyFile = "/etc/certs/kharaone.key"
+
+
+[tls.stores]
+  [tls.stores.default]
+    [tls.stores.default.defaultCertificate]
+      certFile = "/etc/certs/kharaone.crt"
+      keyFile = "/etc/certs/kharaone.key"

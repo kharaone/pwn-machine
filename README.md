@@ -59,3 +59,10 @@ Recreating pm_manager_1     ... done
 ```
 
 Check the [wiki](https://github.com/yeswehack/pwn-machine/wiki) for more informations.
+
+
+TLS
+
+openssl rsa -outform der -in privkey.pem -out privkey.key
+openssl x509 -outform der -in fullchain.pem -out fullchain.crt
+openssl x509 -outform der -in cert.pem -out cert.crt

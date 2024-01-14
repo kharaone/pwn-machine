@@ -69,8 +69,8 @@ services:
     volumes:
       - traefik-data:/data:rw
       - traefik-logs:/logs/traefik
-      - ./docker/traefik/traefik-override.toml:/etc/traefik/traefik.toml
-      - ./docker/traefik/configs:/etc/traefik:ro
+      - ./dockers/traefik/traefik-override.toml:/etc/traefik/traefik.toml
+      - ./dockers/traefik/configs:/etc/traefik:ro
       - ./certs:/etc/certs:ro
     environment:
       TRAEFIK_PROVIDERS_REDIS_ENDPOINTS: "redis:6379"

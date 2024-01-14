@@ -70,6 +70,7 @@ services:
       - traefik-data:/data:rw
       - traefik-logs:/logs/traefik
       - ./dockers/traefik/configs:/etc/traefik:ro
+      - ./dockers/traefik/traefik.toml:/etc/traefik/traefik.toml
       - ./certs:/etc/certs:ro
     environment:
       TRAEFIK_PROVIDERS_REDIS_ENDPOINTS: "redis:6379"

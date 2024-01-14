@@ -69,7 +69,7 @@ services:
     volumes:
       - traefik-data:/data:rw
       - traefik-logs:/logs/traefik
-      - ./dockers/traefik/configs:/etc/traefik:ro
+      - ./dockers/traefik/configs:/etc/traefik
       - ./dockers/traefik/traefik.toml:/etc/traefik/traefik.toml
       - ./certs:/etc/certs:ro
     environment:

@@ -21,6 +21,18 @@
   insecure = true
   dashboard = false
 
+[tls]
+  [tlsOptions]
+    [tlsOptions.default]
+      minVersion = "VersionTLS12"
+      sniStrict = true
+
+[tls.stores]
+  [tls.stores.default]
+    [tls.stores.default.defaultCertificate]
+      certFile = "/etc/certs/fullchain.pem"
+      keyFile = "/etc/certs/privkey.pem"
+
 
 [certificatesResolvers]
   [certificatesResolvers.letsencrypt-staging-http]

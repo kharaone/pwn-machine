@@ -36,6 +36,7 @@ services:
       MYSQL_USER: "root"
       MYSQL_PASSWORD: *PDNS_MYSQL_ROOT_PASSWORD
       MYSQL_DATABASE: *PDNS_MYSQL_DATABASE
+      PDNS_PROPAGATION_TIMEOUT: 600
     depends_on:
       - powerdns-db
     networks:

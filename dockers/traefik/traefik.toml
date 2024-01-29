@@ -7,7 +7,6 @@
     address=":80"
   [entryPoints.https]
     address=":443"
-    [entryPoints.https.tls]
 
 [providers.redis]
   endpoints = "redis:6379"
